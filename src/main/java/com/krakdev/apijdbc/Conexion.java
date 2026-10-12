@@ -14,7 +14,7 @@ public class Conexion {
 	
 	private static final Logger Log = LogManager.getLogger(Conexion.class);
 	
-	private static final String URL = "jdbc:postgresql://localhost:5432/apijdb";
+	private static final String URL = "jdbc:postgresql://localhost:5432/apijdbc";
 	private static final String USER = "postgres";
 	private static final String PASSWORD = "admin";
 	
