@@ -140,7 +140,7 @@ public class VideojuegoJdbc {
 		return null;
 	}
 
-	public static Videojuego actualizar(Videojuego videojuego) {
+	public static Videojuego actualizar(String codigo , Videojuego videojuego) {
 		Connection con = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
@@ -167,14 +167,14 @@ public class VideojuegoJdbc {
 
             // condicion where
 
-            ps.setString(6, videojuego.getCodigo());
+            ps.setString(6, codigo);
 
             int filas = ps.executeUpdate();
             
             Log.info("Filas actualizadas: " + filas);
             if (filas > 0) {
                 Log.info("Video juego actualizdo con exito");
-                return buscar(videojuego.getCodigo());
+                return buscar(codigo);
             }
 
         } catch (Exception e) {
